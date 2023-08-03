@@ -81,11 +81,11 @@ body {
 @for $i from 1 through 6 {
   .trail-#{$i} {
 			opacity: 0.8 - calc($i / 10);
-      animation : bouncing 3s linear forwards calc($i * 10) + 500ms, ballStrike1 800ms linear forwards calc($i * 10) + 3500ms,
-      ballStrike2 800ms linear forwards calc($i * 10) + 4300ms, ballStrike3 800ms linear forwards calc($i * 10) + 5100ms,
-      ballStrike4 800ms linear forwards calc($i * 10) + 5900ms, ballStrike5 800ms linear forwards calc($i * 10) + 6700ms,
-      speeding1 2s linear forwards calc($i * 10) + 7500ms, speeding2 0.1s forwards calc($i * 10) + 9500ms 30,
-      fadeOut 3s forwards calc($i * 10) + 8500ms;
+      animation : bouncing 3s linear forwards calc($i * 20) + 500ms, ballStrike1 800ms linear forwards calc($i * 20) + 3500ms,
+      ballStrike2 800ms linear forwards calc($i * 20) + 4300ms, ballStrike3 800ms linear forwards calc($i * 20) + 5100ms,
+      ballStrike4 800ms linear forwards calc($i * 20) + 5900ms, ballStrike5 800ms linear forwards calc($i * 20) + 6700ms,
+      speeding1 2s linear forwards calc($i * 20) + 7500ms, speeding2 0.4s forwards calc($i * 40) + 9500ms 30,
+      fadeOut 4s forwards calc($i * 20) + 8500ms;
   }
 }
 
@@ -180,7 +180,7 @@ body {
   10%, 30%, 50%, 64%, 78%, 86%, 92%, 96%, 98%, 99% 
   {
     top: 9.5vw;
-    left: 60.5%;  
+    left: 59%;  
     animation-timing-function: ease-in;
   }
   20%, 40%, 57%, 71%, 82%, 90%, 94%, 97%, 98.5% 
@@ -201,7 +201,7 @@ body {
   10%, 30%, 50%, 70%, 90% 
   {
     top: 9.5vw;
-    left: 59%;  
+    left: 61.5%;  
     animation-timing-function: ease-out;
   }
   20%, 40%, 60%, 80%, 100% 
@@ -214,39 +214,21 @@ body {
 }
 @keyframes fadeOut {
   15% {
-    width: 6vw;
-    height: 6vw;
-    top: 9vw;
     opacity: 0.8;
   }
   30% {
-    width: 7vw;
-    height: 7vw;
-    top: 8vw;
     opacity: 0.7;
   }
   45% {
-    width: 8vw;
-    height: 8vw;
-    top: 7vw;
     opacity: 0.5;
   }
   60% {
-    width: 9vw;
-    height: 9vw;
-    top: 6.5vw;
     opacity: 0.4;
   }
   75% {
-    width: 10vw;
-    height: 10vw;
-    top: 6.3vw;
     opacity: 0.3;
   }
   90% {
-    width: 11vw;
-    height: 11vw;
-    top: 6vw;
     opacity: 0.15;
   }
   100% {
