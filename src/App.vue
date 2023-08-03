@@ -3,7 +3,6 @@
 
 <template>
   <body>
-    <!-- need to add two additional balls for main ball movement effect -->
     <!-- make the leftside and rightside smaller then make them move fast to create the letters p and g -->
     <div class="outer">
       <div class="ball"></div>
@@ -13,6 +12,8 @@
       <div class="trail trail-4"></div>
       <div class="trail trail-5"></div>
       <div class="trail trail-6"></div>
+      <div class="leftSide"></div>
+      <div class="rightSide"></div>
       <h1 class="gameName">pong</h1>
     </div>
   </body>
@@ -20,8 +21,8 @@
 
 <style lang="scss">
 
-$neon-color: rgb(4, 217, 255);
-$bg-color: rgb(0, 62, 73);
+$neon-color: hsl(317, 100%, 54%);
+$bg-color: hsl(323, 21%, 16%);
 
 body {
   background: $bg-color;
@@ -65,6 +66,7 @@ body {
   speeding1 2s linear forwards 7500ms, speeding2 0.1s forwards 9500ms 30,
   fadeOut 4s forwards 8500ms;
 }
+
 .trail {
   width: 5vw;
   height: 5vw;
@@ -74,6 +76,17 @@ body {
   box-shadow: 0 0 1em 0 $neon-color;
   left: 0px;
   top: 0;
+}
+
+@for $i from 1 through 6 {
+  .trail-#{$i} {
+			opacity: 0.8 - calc($i / 10);
+      animation : bouncing 3s linear forwards calc($i * 10) + 500ms, ballStrike1 800ms linear forwards calc($i * 10) + 3500ms,
+      ballStrike2 800ms linear forwards calc($i * 10) + 4300ms, ballStrike3 800ms linear forwards calc($i * 10) + 5100ms,
+      ballStrike4 800ms linear forwards calc($i * 10) + 5900ms, ballStrike5 800ms linear forwards calc($i * 10) + 6700ms,
+      speeding1 2s linear forwards calc($i * 10) + 7500ms, speeding2 0.1s forwards calc($i * 10) + 9500ms 30,
+      fadeOut 3s forwards calc($i * 10) + 8500ms;
+  }
 }
 
 .leftSide {
