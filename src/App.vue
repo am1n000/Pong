@@ -3,20 +3,32 @@
 
 <template>
   <body>
+    <!-- need to add two additional balls for main ball movement effect -->
+    <!-- make the leftside and rightside smaller then make them move fast to create the letters p and g -->
     <div class="outer">
       <div class="ball"></div>
-      <div class="leftSide"></div>
-      <div class="rightSide"></div>
+      <div class="trail trail-1"></div>
+      <div class="trail trail-2"></div>
+      <div class="trail trail-3"></div>
+      <div class="trail trail-4"></div>
+      <div class="trail trail-5"></div>
+      <div class="trail trail-6"></div>
       <h1 class="gameName">pong</h1>
     </div>
   </body>
 </template>
 
-<style>
+<style lang="scss">
+
+$neon-color: rgb(4, 217, 255);
+$bg-color: rgb(0, 62, 73);
+
 body {
-  background: linear-gradient(to left, blue, lightblue);
+  background: $bg-color;
   overflow: hidden;
 }
+
+
 
 .outer {
   position: absolute;
@@ -43,14 +55,25 @@ body {
   height: 5vw;
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(to right, black, grey);
+  background: $neon-color;
   left: 0px;
   top: 0;
+  box-shadow: 0 0 1em 0 $neon-color;
   animation: bouncing 3s linear forwards 500ms, ballStrike1 800ms linear forwards 3500ms,
   ballStrike2 800ms linear forwards 4300ms, ballStrike3 800ms linear forwards 5100ms,
   ballStrike4 800ms linear forwards 5900ms, ballStrike5 800ms linear forwards 6700ms,
-  speeding1 2s linear forwards 7500ms, speeding2 0.1s infinite 9500ms,
-  fadeOut 3s forwards 8500ms;
+  speeding1 2s linear forwards 7500ms, speeding2 0.1s forwards 9500ms 30,
+  fadeOut 4s forwards 8500ms;
+}
+.trail {
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  border-radius: 50%;
+  background: $neon-color;
+  box-shadow: 0 0 1em 0 $neon-color;
+  left: 0px;
+  top: 0;
 }
 
 .leftSide {
