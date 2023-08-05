@@ -34,12 +34,15 @@ nav {
   display: flex;
   gap: 2vw;
   opacity: 0;
-  animation: navAppear 1s forwards 9s;
+  visibility :hidden;
+  animation: navAppear 10s forwards 9s;
 }
 
 @keyframes navAppear {
   100% {
     opacity: 1;
+    visibility: visible;
+    animation-timing-function: ease-in;
   }
 }
 
