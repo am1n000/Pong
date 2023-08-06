@@ -1,7 +1,6 @@
 <script setup>
 import LandingPage from './views/LandingPage.vue';
-// import LoginPage from './views/LandingPage.vue';
-
+import LoginPage from './views/LoginPage.vue';
 </script>
 
 <template>
@@ -25,6 +24,7 @@ body {
   padding: 0;
   overflow: hidden;
   background: $bg-color;
+  display: grid;
 }
 
 nav {
@@ -34,14 +34,12 @@ nav {
   display: flex;
   gap: 2vw;
   opacity: 0;
-  visibility :hidden;
-  animation: navAppear 10s forwards 9s;
+  animation: navAppear 10s forwards;
 }
 
 @keyframes navAppear {
   100% {
     opacity: 1;
-    visibility: visible;
     animation-timing-function: ease-in;
   }
 }

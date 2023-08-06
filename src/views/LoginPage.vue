@@ -1,17 +1,9 @@
-<script setup></script>
+<script setup>
+import GameName from "../components/GameName.vue"
+import Auth from "../components/Authentification.vue"
+</script>
 
 <template>
-    <h1 class="login">Login page</h1>
+    <GameName/>
+    <Auth/>
 </template>
-
-
-<style>
-
-.login {
-    position: absolute;
-    font-size: 8em;
-    color: white;
-    left: 30%;
-}
-
-</style>
