@@ -3,18 +3,22 @@
 import Ball from '../components/Ball.vue';
 import GameName from '../components/GameName.vue';
 import state from '../stores/store'
-import { onBeforeUnmount } from 'vue';
+import { onBeforeUnmount, ref } from 'vue';
+
 
 onBeforeUnmount(() => {
-    state.ballAnimation = false;
-    state.gameNameAnimation.style = 'none';
+  state.ballAnimation = false;
+  state.gameNameAnimation = {
+    opacity: 1,
+    animation: 'none',
+  }
   });
 
 </script>
 
 <template>
 
-  <GameName v-if="state.gameNameAnimation"/>
   <Ball v-if="state.ballAnimation"/>
+  <GameName :style="state.gameNameAnimation"/>
 
 </template>

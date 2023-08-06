@@ -7,3 +7,12 @@ import Auth from "../components/Authentification.vue"
     <GameName/>
     <Auth/>
 </template>
+
+<style scoped>
+
+.gameName {
+    opacity: 1;
+    animation: none;
+}
+
+</style>

@@ -33,7 +33,7 @@ $neon-color: rgb(255 ,20 , 136);
     left: 50%;
     transform: translate(-50%, -50%);
     padding-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 50px 5px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
@@ -43,18 +43,23 @@ $neon-color: rgb(255 ,20 , 136);
 }
 
 .authRapper h1 {
-    font-size: 36px;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 0px;
 }
 
 .authRapper p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
 }
 
 .welcome {
+    font-size: 20px;
+    font-family: 'Amaranth', sans-serif;
     line-height: 3;
     margin-bottom: 10px;
 }
@@ -70,6 +75,15 @@ $neon-color: rgb(255 ,20 , 136);
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    color: rgb(106, 4, 4);
+    font-family: Space Grotesk;
+    text-shadow: 0 0 0.055em rgb(233, 209, 209), 0 0 0.125em black;
+}
+
+.loginButton:hover {
+    background: transparent;
+    color: white;
+    text-shadow: none;
 }
 
 .Logo {

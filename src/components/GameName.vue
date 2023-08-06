@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <h1 :style="state.gameNameAnimation.style" class="gameName">pong</h1>
+    <h1 class="gameName">pong</h1>
 </template>
 
 <style lang="scss">
@@ -20,7 +20,7 @@ $neon-color: rgb(255 ,20 , 136);
   text-shadow: 0 0 0.055em rgb(233, 209, 209), 0 0 0.125em $neon-color;
   opacity: 0;
   font-size: 14vw;
-  animation: textAppear 3s forwards 9s;
+  animation: v-bind(gameNameAnimationStyle);
 }
 
 .gameName::before {
