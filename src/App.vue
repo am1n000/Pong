@@ -1,13 +1,17 @@
 <script setup>
 import LandingPage from './views/LandingPage.vue';
 import LoginPage from './views/LoginPage.vue';
+import AccountSettings from './views/AccountSettingsPage.vue';
+import ProfilePage from './views/ProfilePage.vue';
 </script>
 
 <template>
   <body>
     <nav>
-      <router-link class="nav-button" to="/">Home</router-link>
+      <!-- <router-link class="nav-button" to="/">Home</router-link> -->
       <router-link class="nav-button" to="/login">Login</router-link>
+      <router-link class="nav-button" to="/settings">Settings</router-link>
+      <router-link class="nav-button" to="/profile">Profile</router-link>
     </nav>
     <router-view/>
   </body>
