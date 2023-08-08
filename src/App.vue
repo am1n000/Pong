@@ -8,7 +8,7 @@ import ProfilePage from './views/ProfilePage.vue';
 <template>
   <body>
     <nav>
-      <!-- <router-link class="nav-button" to="/">Home</router-link> -->
+      <router-link class="nav-button" to="/">Home</router-link>
       <router-link class="nav-button" to="/login">Login</router-link>
       <router-link class="nav-button" to="/settings">Settings</router-link>
       <router-link class="nav-button" to="/profile">Profile</router-link>
